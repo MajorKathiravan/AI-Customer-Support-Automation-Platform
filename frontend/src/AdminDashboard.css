@@ -1,0 +1,1131 @@
+.admin-shell {
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+
+.admin-loading {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #6f7b90;
+}
+
+
+.loading-spin {
+  animation: admin-spin 1s linear infinite;
+}
+
+
+@keyframes admin-spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.admin-topbar {
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e3e8f0;
+}
+
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+
+.admin-brand-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #172033;
+  color: #ffffff;
+}
+
+
+.admin-brand strong {
+  display: block;
+
+  font-size: 14px;
+}
+
+
+.admin-brand span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #7b8597;
+
+  font-size: 11px;
+}
+
+
+.admin-actions {
+  display: flex;
+
+  gap: 8px;
+}
+
+
+.admin-refresh,
+.back-to-chat {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 12px;
+
+  border: 1px solid #dce2eb;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #4d596d;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+.back-to-chat {
+  background: #172033;
+  color: #ffffff;
+
+  border-color: #172033;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.admin-nav {
+  display: flex;
+
+  gap: 5px;
+
+  padding: 12px 28px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e3e8f0;
+}
+
+
+.admin-nav-item {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 12px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #778195;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+.admin-nav-item span {
+  min-width: 19px;
+
+  padding: 2px 5px;
+
+  border-radius: 999px;
+
+  background: #e9edf3;
+
+  color: #596579;
+
+  font-size: 9px;
+}
+
+
+.admin-nav-item.active {
+  background: #172033;
+
+  color: #ffffff;
+}
+
+
+.admin-nav-item.active span {
+  background: #ffffff;
+
+  color: #172033;
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.admin-content {
+  width: min(1450px, 100%);
+
+  margin: 0 auto;
+
+  padding: 28px;
+}
+
+
+.admin-error {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  padding: 11px 13px;
+
+  border-radius: 10px;
+
+  background: #fff2f2;
+
+  border: 1px solid #f0d7d7;
+
+  color: #9c4545;
+
+  font-size: 13px;
+}
+
+
+.dashboard-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+
+.eyebrow {
+  color: #8791a2;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.dashboard-heading h1 {
+  margin: 6px 0 5px;
+
+  font-size: 27px;
+
+  letter-spacing: -0.025em;
+}
+
+
+.dashboard-heading p {
+  margin: 0;
+
+  color: #748095;
+
+  font-size: 13px;
+}
+
+
+.live-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 7px 10px;
+
+  border: 1px solid #dce7df;
+
+  border-radius: 999px;
+
+  background: #f2f8f4;
+
+  color: #4d715b;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.live-badge span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #4e8c65;
+}
+
+
+/* ============================================================
+   STATS
+   ============================================================ */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-bottom: 18px;
+}
+
+
+.stat-card {
+  padding: 18px;
+
+  border: 1px solid #e2e7ef;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 7px 24px rgba(26, 39, 67, 0.035);
+}
+
+
+.stat-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  border-radius: 10px;
+
+  background: #eef2f7;
+
+  color: #59677c;
+}
+
+
+.stat-card > span {
+  display: block;
+
+  color: #7b8699;
+
+  font-size: 11px;
+}
+
+
+.stat-card strong {
+  display: block;
+
+  margin-top: 7px;
+
+  font-size: 25px;
+}
+
+
+/* ============================================================
+   CARDS / OVERVIEW
+   ============================================================ */
+
+.overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(300px, 0.8fr);
+
+  gap: 15px;
+}
+
+
+.dashboard-card {
+  background: #ffffff;
+
+  border: 1px solid #e2e7ef;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 7px 24px rgba(26, 39, 67, 0.035);
+
+  overflow: hidden;
+}
+
+
+.card-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 17px 18px;
+
+  border-bottom: 1px solid #e8ecf2;
+}
+
+
+.card-header h2 {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+
+.card-header span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #7d8798;
+
+  font-size: 10px;
+}
+
+
+.card-header button {
+  border: 0;
+
+  background: transparent;
+
+  color: #516079;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   TICKETS
+   ============================================================ */
+
+.ticket-list {
+  padding: 5px 18px 15px;
+}
+
+
+.ticket-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    auto;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+
+.ticket-row:last-child {
+  border-bottom: 0;
+}
+
+
+.ticket-main {
+  min-width: 0;
+}
+
+
+.ticket-main strong {
+  display: block;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-size: 12px;
+}
+
+
+.ticket-main span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #8490a2;
+
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+
+.priority-badge,
+.status-badge,
+.category-pill {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 999px;
+
+  padding: 5px 8px;
+
+  font-size: 9px;
+
+  font-weight: 750;
+
+  text-transform: uppercase;
+}
+
+
+.admin-priority-low {
+  background: #edf4ff;
+  color: #3e6595;
+}
+
+
+.admin-priority-medium {
+  background: #f3f1e7;
+  color: #71693b;
+}
+
+
+.admin-priority-high {
+  background: #fff0e5;
+  color: #9c582a;
+}
+
+
+.admin-priority-urgent {
+  background: #ffe9e9;
+  color: #a54040;
+}
+
+
+.status-open {
+  background: #edf4ff;
+  color: #466b9c;
+}
+
+
+.status-pending {
+  background: #fff5dd;
+  color: #8a6a24;
+}
+
+
+.status-resolved {
+  background: #edf7ef;
+  color: #4c7c59;
+}
+
+
+.status-closed {
+  background: #eef0f3;
+  color: #687387;
+}
+
+
+/* ============================================================
+   HEALTH
+   ============================================================ */
+
+.health-list {
+  padding: 8px 18px 15px;
+}
+
+
+.health-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+
+.health-item:last-child {
+  border-bottom: 0;
+}
+
+
+.health-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #657187;
+
+  font-size: 11px;
+}
+
+
+.health-item strong {
+  font-size: 15px;
+}
+
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+
+.table-card {
+  overflow: hidden;
+}
+
+
+.table-wrap {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 850px;
+}
+
+
+th {
+  padding: 11px 15px;
+
+  text-align: left;
+
+  background: #fafbfc;
+
+  border-bottom: 1px solid #e7ebf1;
+
+  color: #7b8698;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.06em;
+}
+
+
+td {
+  padding: 13px 15px;
+
+  border-bottom: 1px solid #edf0f4;
+
+  color: #4e596c;
+
+  font-size: 11px;
+
+  vertical-align: middle;
+}
+
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+
+.table-ticket strong,
+td > strong {
+  display: block;
+
+  color: #253047;
+
+  font-size: 11px;
+}
+
+
+.table-ticket span {
+  display: block;
+
+  max-width: 250px;
+
+  margin-top: 4px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: #7d8899;
+
+  font-size: 10px;
+}
+
+
+.table-secondary {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #8b95a6;
+
+  font-size: 9px;
+}
+
+
+.category-pill {
+  background: #eff2f6;
+
+  color: #657187;
+
+  text-transform: capitalize;
+}
+
+
+.status-select {
+  min-width: 100px;
+
+  padding: 6px 8px;
+
+  border: 1px solid #dfe5ed;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 650;
+}
+
+
+/* ============================================================
+   CONVERSATIONS
+   ============================================================ */
+
+.conversation-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(270px, 0.65fr)
+    minmax(0, 1.35fr);
+
+  gap: 15px;
+}
+
+
+.conversation-list {
+  padding: 7px;
+}
+
+
+.conversation-item {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    32px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  text-align: left;
+
+  background: transparent;
+
+  color: #253047;
+}
+
+
+.conversation-item:hover {
+  background: #f5f7fa;
+}
+
+
+.conversation-item.selected {
+  background: #eef2f7;
+}
+
+
+.conversation-avatar {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #e9edf3;
+
+  color: #526076;
+}
+
+
+.conversation-info {
+  min-width: 0;
+}
+
+
+.conversation-info strong {
+  display: block;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-size: 11px;
+}
+
+
+.conversation-info span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #8490a1;
+
+  font-size: 9px;
+}
+
+
+.conversation-status {
+  padding: 4px 6px;
+
+  border-radius: 999px;
+
+  background: #eef0f4;
+
+  color: #6f7a8c;
+
+  font-size: 8px;
+
+  font-weight: 750;
+
+  text-transform: uppercase;
+}
+
+
+.conversation-escalated {
+  background: #fff0e7;
+
+  color: #9e582d;
+}
+
+
+.conversation-open {
+  background: #edf4ff;
+
+  color: #466b9b;
+}
+
+
+.conversation-resolved {
+  background: #edf7ef;
+
+  color: #4c7c59;
+}
+
+
+.message-detail {
+  min-height: 500px;
+}
+
+
+.admin-messages {
+  padding: 18px;
+
+  max-height: 650px;
+
+  overflow-y: auto;
+
+  background: #fafbfd;
+}
+
+
+.admin-message {
+  max-width: 78%;
+
+  margin-bottom: 14px;
+
+  padding: 12px 14px;
+
+  border-radius: 13px;
+
+  background: #eef2f7;
+}
+
+
+.admin-message.customer {
+  margin-left: auto;
+
+  background: #172033;
+
+  color: #ffffff;
+}
+
+
+.admin-message-meta {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 7px;
+
+  font-size: 9px;
+}
+
+
+.admin-message-meta span {
+  opacity: 0.65;
+}
+
+
+.admin-message p {
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  white-space: pre-wrap;
+}
+
+
+.message-intelligence {
+  display: flex;
+
+  gap: 7px;
+
+  flex-wrap: wrap;
+
+  margin-top: 9px;
+}
+
+
+.message-intelligence span {
+  padding: 4px 6px;
+
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  color: #6b7689;
+
+  font-size: 8px;
+}
+
+
+.admin-message.customer
+.message-intelligence span {
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #dce2eb;
+}
+
+
+/* ============================================================
+   EMPTY
+   ============================================================ */
+
+.empty-state {
+  min-height: 190px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  color: #9aa3b2;
+}
+
+
+.empty-state.large {
+  min-height: 320px;
+}
+
+
+.empty-state h3 {
+  margin: 2px 0 0;
+
+  color: #566276;
+
+  font-size: 14px;
+}
+
+
+.empty-state p {
+  margin: 0;
+
+  color: #8b95a5;
+
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+  .stats-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .conversation-layout {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .admin-topbar {
+    height: auto;
+
+    padding: 14px;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+
+  .admin-actions {
+    flex-direction: column;
+  }
+
+
+  .admin-nav {
+    overflow-x: auto;
+
+    padding: 10px 14px;
+  }
+
+
+  .admin-content {
+    padding: 18px 14px;
+  }
+
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .ticket-row {
+    grid-template-columns: 1fr auto;
+  }
+
+
+  .ticket-row .status-badge {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+}
